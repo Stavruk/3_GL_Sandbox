@@ -1,7 +1,15 @@
 // Task 1 - sort an array with numbers
 // const arrayNums = [7,101,3,1,9,11,100,111]
 export function sortArray(array) {
-  return array.sort();
+  for (let j = array.length - 1; j > 0; j--) {
+    for (let i = 0; i < j; i++) {
+      if (array[i] > array[i + 1]) {
+        let temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+      }
+    }
+  }
 }
 
 // Task 2 - filter an array of strings and keep only
